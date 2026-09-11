@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JPG to PNG Converter - Convert Images Online | ToolBox</title>
+
+    <meta name="description" content="Convert JPG and JPEG images to PNG online for free. Fast, secure, and easy to use with no software installation required.">
+    <meta name="keywords" content="JPG to PNG, JPEG to PNG, convert JPG to PNG, image converter, online image converter">
+
+    <link rel="stylesheet" href="jpg-to-png.css">
+    
+    <style type="text/css">
+    /* =========================
+    RESET
+    ========================= */
+    
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    html {
+    scroll-behavior: smooth;
+    }
+    
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fa;
+    color: #111;
+    line-height: 1.6;
+    }
+    
+    img {
+    max-width: 100%;
+    display: block;
+    }
+    
+    button,
+    a {
+    font: inherit;
+    }
+    
+    button {
+    cursor: pointer;
+    }
+
+    /* Keep the native file control invisible; the label below is the visible picker button. */
+    .file-input {
+    display: none !important;
+    }
+    
+    a {
+    text-decoration: none;
+    color: inherit;
+    }
+    
+    
+    /* =========================
+    CONTAINER
+    ========================= */
+    
+    .container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+    }
+    
+    
+    /* =========================
+    HEADER
+    ========================= */
+    
+    .site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    }
+    
+    .header-content {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    }
+    
+    .logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    }
+    
+    .navigation {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    }
+    
+    .navigation a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    transition: color 0.2s ease;
+    }
+    
+    .navigation a:hover {
+    color: #111;
+    }
+    
+    
+    /* =========================
+    HERO
+    ========================= */
+    
+    .hero {
+    padding: 60px 0 45px;
+    text-align: center;
+    background: #ffffff;
+    }
+    
+    .eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #555;
+    }
+    
+    .hero h1 {
+    font-size: 36px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    letter-spacing: -1.2px;
+    }
+    
+    .hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 16px;
+    }
+    
+    
+    /* =========================
+    CONVERTER
+    ========================= */
+    
+    .converter-section {
+    padding: 35px 0 70px;
+    }
+    
+    .converter-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 22px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+    
+    
+    /* =========================
+    UPLOAD AREA
+    ========================= */
+    
+    .upload-area {
+    border: 2px dashed #cfd3d8;
+    border-radius: 15px;
+    padding: 45px 18px;
+    text-align: center;
+    transition: 0.2s ease;
+    }
+    
+    .upload-area.drag-over {
+    border-color: #111;
+    background: #fafafa;
+    }
+    
+    .upload-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    font-weight: 700;
+    }
+    
+    .upload-area h2 {
+    font-size: 23px;
+    margin-bottom: 8px;
+    }
+    
+    .upload-area p {
+    color: #666;
+    font-size: 14px;
+    max-width: 500px;
+    margin: 0 auto 20px;
+    }
+    
+    .upload-area small {
+    display: block;
+    margin-top: 14px;
+    color: #888;
+    font-size: 12px;
+    }
+    
+    
+    /* =========================
+    BUTTONS
+    ========================= */
+    
+    .primary-button,
+    .secondary-button {
+    border: none;
+    border-radius: 10px;
+    padding: 13px 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    
+    .primary-button {
+    background: #111;
+    color: #fff;
+    }
+    
+    .primary-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+    }
+    
+    .secondary-button {
+    background: #f1f2f4;
+    color: #111;
+    margin-top: 12px;
+    }
+    
+    .secondary-button:hover {
+    background: #e6e7e9;
+    }
+    
+    .convert-button {
+    width: 100%;
+    margin-top: 25px;
+    }
+    
+    .download-button {
+    width: 100%;
+    margin-top: 22px;
+    }
+    
+    
+    /* =========================
+    PREVIEW
+    ========================= */
+    
+    .preview-section,
+    .result-section {
+    text-align: center;
+    }
+    
+    .preview-section h2,
+    .result-section h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    }
+    
+    .preview-wrapper {
+    width: 100%;
+    min-height: 220px;
+    background: #f1f2f4;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    }
+    
+    .preview-wrapper img {
+    max-height: 420px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    }
+    
+    
+    /* =========================
+    IMAGE INFORMATION
+    ========================= */
+    
+    .image-information {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 18px;
+    }
+    
+    .info-box {
+    background: #f7f8fa;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 13px;
+    text-align: left;
+    }
+    
+    .info-box span {
+    display: block;
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 3px;
+    }
+    
+    .info-box strong {
+    display: block;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+    }
+    
+    
+    /* =========================
+    SUCCESS MESSAGE
+    ========================= */
+    
+    .success-message {
+    background: #f1f2f4;
+    border-radius: 10px;
+    padding: 13px;
+    margin-bottom: 22px;
+    font-size: 14px;
+    font-weight: 700;
+    }
+    
+    
+    /* =========================
+    INFO SECTIONS
+    ========================= */
+    
+    .info-section,
+    .tools-section,
+    .about-section {
+    padding: 70px 0;
+    }
+    
+    .info-section {
+    background: #ffffff;
+    }
+    
+    .tools-section {
+    background: #f7f8fa;
+    }
+    
+    .about-section {
+    background: #ffffff;
+    }
+    
+    .info-section h2,
+    .tools-section h2,
+    .about-section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+    }
+    
+    .section-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 35px;
+    color: #666;
+    }
+    
+    
+    /* =========================
+    STEPS
+    ========================= */
+    
+    .steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    }
+    
+    .step-card {
+    background: #f7f8fa;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 24px;
+    }
+    
+    .step-number {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #777;
+    }
+    
+    .step-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    }
+    
+    .step-card p {
+    color: #666;
+    font-size: 14px;
+    }
+    
+    
+    /* =========================
+    MORE TOOLS
+    ========================= */
+    
+    .tools-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    }
+    
+    .tool-card {
+    display: block;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 23px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .tool-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    }
+    
+    .tool-card h3 {
+    font-size: 19px;
+    margin-bottom: 7px;
+    }
+    
+    .tool-card p {
+    color: #666;
+    font-size: 14px;
+    }
+    
+    
+    /* =========================
+    ABOUT
+    ========================= */
+    
+    .about-section p {
+    max-width: 750px;
+    margin: 0 auto 15px;
+    text-align: center;
+    color: #666;
+    }
+    
+    
+    /* =========================
+    FOOTER
+    ========================= */
+    
+    .site-footer {
+    background: #111;
+    color: #ffffff;
+    padding: 35px 0;
+    text-align: center;
+    }
+    
+    .site-footer p {
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 5px;
+    }
+    
+    
+    /* =========================
+    TABLET
+    ========================= */
+    
+    @media (min-width: 600px) {
+    
+    .converter-card {
+    padding: 35px;
+    }
+    
+    .image-information {
+    grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+    }
+    
+    }
+    
+    
+    /* =========================
+    DESKTOP
+    ========================= */
+    
+    @media (min-width: 900px) {
+    
+    .hero {
+    padding: 85px 0 65px;
+    }
+    
+    .hero h1 {
+    font-size: 48px;
+    }
+    
+    .hero p {
+    font-size: 17px;
+    }
+    
+    .converter-section {
+    padding: 50px 0 90px;
+    }
+    
+    .converter-card {
+    padding: 40px;
+    }
+    
+    .upload-area {
+    padding: 65px 30px;
+    }
+    
+    .upload-area h2 {
+    font-size: 26px;
+    }
+    
+    .info-section,
+    .tools-section,
+    .about-section {
+    padding: 90px 0;
+    }
+    
+    }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-content">
+
+            <a href="index.html" class="logo">
+                ToolBox
+            </a>
+
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="#tools">Tools</a>
+                <a href="#about">About</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero">
+            <div class="container">
+
+                <span class="eyebrow">FREE ONLINE TOOL</span>
+
+                <h1>JPG to PNG Converter</h1>
+
+                <p>
+                    Convert JPG and JPEG images to PNG format quickly and easily.
+                    No software installation required.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- CONVERTER -->
+        <section class="converter-section">
+
+            <div class="container">
+
+                <div class="converter-card">
+
+                    <!-- UPLOAD AREA -->
+                    <div class="upload-area" id="uploadArea">
+
+                        <div class="upload-icon">
+                            ↑
+                        </div>
+
+                        <h2>Upload a JPG Image</h2>
+
+                        <p>
+                            Drag and drop your image here or choose a file from your device.
+                        </p>
+
+                        <label
+                            for="imageInput"
+                            id="chooseImageButton"
+                            class="primary-button"
+                            role="button"
+                            tabindex="0">
+                            Choose Image
+                        </label>
+
+                        <input
+                            type="file"
+                            id="imageInput"
+                            class="file-input"
+                            accept="image/jpeg,.jpg,.jpeg,image/jpg"
+                            aria-label="Choose a JPG or JPEG image"
+                        >
+
+                        <small>
+                            JPG or JPEG • Maximum file size: 10MB
+                        </small>
+
+                    </div>
+
+
+                    <!-- PREVIEW -->
+                    <div
+                        class="preview-section"
+                        id="previewSection"
+                        hidden>
+
+                        <h2>Image Preview</h2>
+
+                        <div class="preview-wrapper">
+                            <img
+                                id="imagePreview"
+                                src=""
+                                alt="Selected JPG image preview">
+                        </div>
+
+                        <div class="image-information">
+
+                            <div class="info-box">
+                                <span>File Name</span>
+                                <strong id="fileName">-</strong>
+                            </div>
+
+                            <div class="info-box">
+                                <span>File Size</span>
+                                <strong id="fileSize">-</strong>
+                            </div>
+
+                            <div class="info-box">
+                                <span>Format</span>
+                                <strong id="fileFormat">JPG</strong>
+                            </div>
+
+                        </div>
+
+
+                        <!-- CONVERT BUTTON -->
+                        <button
+                            type="button"
+                            id="convertButton"
+                            class="primary-button convert-button">
+                            Convert to PNG
+                        </button>
+
+                        <button
+                            type="button"
+                            id="resetButton"
+                            class="secondary-button">
+                            Choose Another Image
+                        </button>
+
+                    </div>
+
+
+                    <!-- RESULT -->
+                    <div
+                        class="result-section"
+                        id="resultSection"
+                        hidden>
+
+                        <div class="success-message">
+                            ✓ Your image has been converted successfully.
+                        </div>
+
+                        <h2>PNG Result</h2>
+
+                        <div class="preview-wrapper result-preview">
+                            <img
+                                id="resultPreview"
+                                src=""
+                                alt="Converted PNG image">
+                        </div>
+
+                        <div class="image-information">
+
+                            <div class="info-box">
+                                <span>Original Format</span>
+                                <strong>JPG</strong>
+                            </div>
+
+                            <div class="info-box">
+                                <span>New Format</span>
+                                <strong>PNG</strong>
+                            </div>
+
+                            <div class="info-box">
+                                <span>PNG Size</span>
+                                <strong id="resultSize">-</strong>
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="#"
+                            id="downloadButton"
+                            class="primary-button download-button"
+                            download="converted-image.png">
+                            Download PNG
+                        </a>
+
+                        <button
+                            type="button"
+                            id="convertAnotherButton"
+                            class="secondary-button">
+                            Convert Another Image
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOW IT WORKS -->
+        <section class="info-section">
+
+            <div class="container">
+
+                <h2>How It Works</h2>
+
+                <p class="section-intro">
+                    Convert your JPG images to PNG in just a few simple steps.
+                </p>
+
+                <div class="steps-grid">
+
+                    <div class="step-card">
+                        <span class="step-number">01</span>
+                        <h3>Upload</h3>
+                        <p>
+                            Choose a JPG or JPEG image from your device.
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">02</span>
+                        <h3>Convert</h3>
+                        <p>
+                            Click the convert button and let the browser process your image.
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-number">03</span>
+                        <h3>Download</h3>
+                        <p>
+                            Download your new PNG image instantly.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TOOLS -->
+        <section
+            class="tools-section"
+            id="tools">
+
+            <div class="container">
+
+                <h2>More Free Tools</h2>
+
+                <p class="section-intro">
+                    Explore more useful image tools from ToolBox.
+                </p>
+
+                <div class="tools-grid">
+
+                    <a href="index.html" class="tool-card">
+                        <h3>Image Compressor</h3>
+                        <p>
+                            Reduce image file size while keeping good quality.
+                        </p>
+                    </a>
+
+                    <a href="image-resizer.html" class="tool-card">
+                        <h3>Image Resizer</h3>
+                        <p>
+                            Resize images to any width and height.
+                        </p>
+                    </a>
+
+                    <a href="png-to-jpg.html" class="tool-card">
+                        <h3>PNG to JPG</h3>
+                        <p>
+                            Convert PNG images to JPG format.
+                        </p>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section
+            class="about-section"
+            id="about">
+
+            <div class="container">
+
+                <h2>About ToolBox</h2>
+
+                <p>
+                    ToolBox provides simple, free online tools that help you
+                    work with images and digital files directly from your browser.
+                </p>
+
+                <p>
+                    Your JPG image is processed directly in your browser,
+                    making the conversion quick and convenient.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 ToolBox. All rights reserved.
+            </p>
+
+            <p>
+                Free online tools for everyday tasks.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    
+    const imageInput = document.getElementById("imageInput");
+    const chooseImageButton = document.getElementById("chooseImageButton");
+    const uploadArea = document.getElementById("uploadArea");
+    
+    const previewSection = document.getElementById("previewSection");
+    const resultSection = document.getElementById("resultSection");
+    
+    const imagePreview = document.getElementById("imagePreview");
+    const resultPreview = document.getElementById("resultPreview");
+    
+    const fileName = document.getElementById("fileName");
+    const fileSize = document.getElementById("fileSize");
+    const fileFormat = document.getElementById("fileFormat");
+    
+    const resultSize = document.getElementById("resultSize");
+    
+    const convertButton = document.getElementById("convertButton");
+    const downloadButton = document.getElementById("downloadButton");
+    
+    const resetButton = document.getElementById("resetButton");
+    const convertAnotherButton = document.getElementById("convertAnotherButton");
+    
+    let selectedFile = null;
+    let convertedURL = null;
+    let previewURL = null;
+    
+    
+    /* =========================
+    CHOOSE IMAGE
+    ========================= */
+    
+    /* The label opens the real file input reliably on mobile browsers. */
+    chooseImageButton.addEventListener("keydown", function (event) {
+    if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    imageInput.click();
+    }
+    });
+    
+    
+    /* =========================
+    FILE SELECTION
+    ========================= */
+    
+    imageInput.addEventListener("change", function () {
+    
+    if (!imageInput.files || imageInput.files.length === 0) {
+    return;
+    }
+    
+    handleImage(imageInput.files[0]);
+    
+    });
+    
+    
+    /* =========================
+    HANDLE IMAGE
+    ========================= */
+    
+    function handleImage(file) {
+    
+    if (!file.type.match(/^image\/jpeg$/)) {
+    
+    alert("Please select a JPG or JPEG image.");
+    
+    imageInput.value = "";
+    
+    return;
+    }
+    
+    
+    const maxSize = 10 * 1024 * 1024;
+    
+    if (file.size > maxSize) {
+    
+    alert("The image is too large. Please choose an image smaller than 10MB.");
+    
+    imageInput.value = "";
+    
+    return;
+    }
+    
+    
+    selectedFile = file;
+    
+    
+    /* Remove old preview URL */
+    
+    if (previewURL) {
+    URL.revokeObjectURL(previewURL);
+    }
+    
+    previewURL = URL.createObjectURL(file);
+    
+    
+    imagePreview.src = previewURL;
+    
+    
+    /* File information */
+    
+    fileName.textContent = file.name;
+    
+    fileSize.textContent = formatFileSize(file.size);
+    
+    fileFormat.textContent = "JPG";
+    
+    
+    /* Show preview */
+    
+    uploadArea.hidden = true;
+    resultSection.hidden = true;
+    previewSection.hidden = false;
+    
+    
+    /* Clear previous converted file */
+    
+    if (convertedURL) {
+    URL.revokeObjectURL(convertedURL);
+    convertedURL = null;
+    }
+    
+    downloadButton.removeAttribute("href");
+    
+    }
+    
+    
+    /* =========================
+    CONVERT TO PNG
+    ========================= */
+    
+    convertButton.addEventListener("click", function () {
+    
+    if (!selectedFile) {
+    
+    alert("Please select a JPG image first.");
+    
+    return;
+    }
+    
+    
+    convertButton.disabled = true;
+    convertButton.textContent = "Converting...";
+    
+    
+    const image = new Image();
+    
+    
+    image.onload = function () {
+    
+    const canvas = document.createElement("canvas");
+    
+    canvas.width = image.naturalWidth;
+    canvas.height = image.naturalHeight;
+    
+    
+    const context = canvas.getContext("2d");
+    
+    context.drawImage(
+    image,
+    0,
+    0,
+    canvas.width,
+    canvas.height
+    );
+    
+    
+    canvas.toBlob(function (blob) {
+    
+    if (!blob) {
+    
+    alert("Conversion failed. Please try another image.");
+    
+    convertButton.disabled = false;
+    convertButton.textContent = "Convert to PNG";
+    
+    return;
+    }
+    
+    
+    /* Remove previous converted file */
+    
+    if (convertedURL) {
+    URL.revokeObjectURL(convertedURL);
+    }
+    
+    
+    convertedURL = URL.createObjectURL(blob);
+    
+    
+    /* Show result */
+    
+    resultPreview.src = convertedURL;
+    
+    resultSize.textContent = formatFileSize(blob.size);
+    
+    
+    downloadButton.href = convertedURL;
+    
+    downloadButton.download = createPNGFileName(selectedFile.name);
+    
+    
+    previewSection.hidden = true;
+    resultSection.hidden = false;
+    
+    
+    convertButton.disabled = false;
+    convertButton.textContent = "Convert to PNG";
+    
+    }, "image/png");
+    
+    
+    };
+    
+    
+    image.onerror = function () {
+    
+    alert("Unable to process this image.");
+    
+    convertButton.disabled = false;
+    convertButton.textContent = "Convert to PNG";
+    
+    };
+    
+    
+    image.src = previewURL;
+    
+    });
+    
+    
+    /* =========================
+    DRAG & DROP
+    ========================= */
+    
+    uploadArea.addEventListener("dragover", function (event) {
+    
+    event.preventDefault();
+    
+    uploadArea.classList.add("drag-over");
+    
+    });
+    
+    
+    uploadArea.addEventListener("dragleave", function () {
+    
+    uploadArea.classList.remove("drag-over");
+    
+    });
+    
+    
+    uploadArea.addEventListener("drop", function (event) {
+    
+    event.preventDefault();
+    
+    uploadArea.classList.remove("drag-over");
+    
+    
+    const files = event.dataTransfer.files;
+    
+    
+    if (!files || files.length === 0) {
+    return;
+    }
+    
+    
+    handleImage(files[0]);
+    
+    });
+    
+    
+    /* =========================
+    RESET
+    ========================= */
+    
+    resetButton.addEventListener("click", resetTool);
+    
+    convertAnotherButton.addEventListener("click", resetTool);
+    
+    
+    function resetTool() {
+    
+    selectedFile = null;
+    
+    
+    if (previewURL) {
+    URL.revokeObjectURL(previewURL);
+    previewURL = null;
+    }
+    
+    
+    if (convertedURL) {
+    URL.revokeObjectURL(convertedURL);
+    convertedURL = null;
+    }
+    
+    
+    imagePreview.src = "";
+    resultPreview.src = "";
+    
+    imageInput.value = "";
+    
+    
+    fileName.textContent = "-";
+    fileSize.textContent = "-";
+    fileFormat.textContent = "JPG";
+    resultSize.textContent = "-";
+    
+    
+    downloadButton.removeAttribute("href");
+    
+    
+    resultSection.hidden = true;
+    previewSection.hidden = true;
+    uploadArea.hidden = false;
+    
+    
+    convertButton.disabled = false;
+    convertButton.textContent = "Convert to PNG";
+    
+    }
+    
+    
+    /* =========================
+    FILE SIZE FORMATTER
+    ========================= */
+    
+    function formatFileSize(bytes) {
+    
+    if (bytes === 0) {
+    return "0 Bytes";
+    }
+    
+    
+    const units = [
+    "Bytes",
+    "KB",
+    "MB",
+    "GB"
+    ];
+    
+    
+    const i = Math.floor(
+    Math.log(bytes) / Math.log(1024)
+    );
+    
+    
+    return (
+    parseFloat(
+    (bytes / Math.pow(1024, i)).toFixed(2)
+    ) +
+    " " +
+    units[i]
+    );
+    
+    }
+    
+    
+    /* =========================
+    PNG FILE NAME
+    ========================= */
+    
+    function createPNGFileName(name) {
+    
+    const lastDot = name.lastIndexOf(".");
+    
+    
+    if (lastDot === -1) {
+    return name + ".png";
+    }
+    
+    
+    return name.substring(0, lastDot) + ".png";
+    
+    }
+    
+    });
+    </script>
+
+</body>
+</html>
